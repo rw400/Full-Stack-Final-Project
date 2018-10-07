@@ -1,4 +1,4 @@
-/* Etherscan Max height*/
+/* Webpage max height and width*/
 html {
     height:100%;
     width:100%;
@@ -6,7 +6,6 @@ html {
 
 body {
     height:100%;
-    /* width:100%; */
     display: flex;
     overflow-y:auto;
     justify-content: center;
@@ -15,10 +14,9 @@ body {
     background-color: grey;
     font-family: "Arial Black", Gadget, sans-serif;
     padding: 1%;
-    /* border-radius: 3px; */
-    /* max-width: 24em; */
 }
 
+/*Set desired display area*/
 .dashboard {
     height: 80%;
     width: 55%;
@@ -30,13 +28,11 @@ body {
     align-items: center;
     background-color:lightskyblue;
     height: 25%;
-    /* width: 100%; */
     color: white;
     
     border: 8px solid red;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
-    /* box-shadow: 2px 2px 6px 0px darkblue; */
 }
 
 .display > p {
@@ -46,13 +42,11 @@ body {
   
 .application-container {
     height: 80%;
-    /* width: 100%; */
 }
   
 .application-buttons {
     display: flex;
     flex-direction: column;
-    /* height: 80%; */
     width: 100%;
     border: 3px solid black;
 }
