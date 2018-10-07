@@ -1,0 +1,58 @@
+/* Etherscan Max height*/
+html {
+    height:100%;
+    width:100%;
+}
+
+body {
+    height:100%;
+    /* width:100%; */
+    display: flex;
+    overflow-y:auto;
+    justify-content: center;
+    align-items: center;
+
+    background-color: grey;
+    font-family: "Arial Black", Gadget, sans-serif;
+    padding: 1%;
+    /* border-radius: 3px; */
+    /* max-width: 24em; */
+}
+
+.dashboard {
+    height: 80%;
+    width: 55%;
+}
+  
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lightskyblue;
+    height: 25%;
+    /* width: 100%; */
+    color: white;
+    
+    border: 8px solid red;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    /* box-shadow: 2px 2px 6px 0px darkblue; */
+}
+
+.display > p {
+    /* margin-right: 5%; */
+    font-size: 3em;
+}
+  
+.application-container {
+    height: 80%;
+    /* width: 100%; */
+}
+  
+.application-buttons {
+    display: flex;
+    flex-direction: column;
+    /* height: 80%; */
+    width: 100%;
+    border: 3px solid black;
+}
