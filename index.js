@@ -1,9 +1,11 @@
 const API_URL_PRICE = "https://api.etherscan.io/api?module=stats&action=ethprice&apikey="
 const API_URL_TRANS = "https://api.etherscan.io/api?module=proxy&action=eth_getTransactionCount&address=0x2910543af39aba0cd09dbb2d50200b3e800a63d2&tag=latest&apikey="
+const API_URL_BLOCKS = "https://api.etherscan.io/api?module=proxy&action=eth_getBlockByNumber&tag=0x10d4f&boolean=true&apikey="
 
 const TOKEN = "EK576RXRMNFN9VT6P48UHHDJWIJSP15GS3"
 const PRICE_URL = API_URL_PRICE + TOKEN
 const TRANS_URL = API_URL_TRANS + TOKEN
+const BLOCKS_URL = API_URL_BLOCKS + TOKEN
 
 // fetch ether price
 function priceStatus() {
@@ -41,6 +43,30 @@ function transStatus() {
                         //get and display transactions in header
                         let ethertrans = document.querySelector('#transaction')
                         currenttransaction.innerHTML += '' + parseInt(res.result, 16)
+                    })
+                }else {
+                   console.log(res)                     //error in status code
+                }
+            
+            })
+        .catch(function(error) {
+            console.log(error)                          //error in the network
+        })
+    })
+}
+
+// fetch current block number
+function transStatus() {
+    window.addEventListener("load", () => {
+        fetch(BLOCKS_URL)
+            .then(function(result) {
+
+                if (result.status == 200) {             // check status code
+                    let blockstatus = result.json()
+                    blockstatus.then(function(res){
+                        //get and display transactions in header
+                        let etherblocks = document.querySelector('#blocks')
+                        currentblocks.innerHTML += '' + parseInt(res.result.gasLimit, 16)
                     })
                 }else {
                    console.log(res)                     //error in status code
